@@ -1,0 +1,80 @@
+package testCases;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.POM.AddToCart;
+import com.POM.LoginPage;
+import com.config.DriverPathConfig;
+import com.config.Path;
+
+public class AddToCartTC01
+{
+	DriverPathConfig mpage = new DriverPathConfig();
+	WebDriver driver2;
+	LoginPage lpage2;
+	AddToCart addcart;
+	TC01 loginmethod;
+
+	@BeforeClass
+	public void openBrowser2() throws InterruptedException
+	{
+		driver2 = mpage.BrowserConfig();
+		driver2.get(Path.loginURL);
+		Thread.sleep(4000);
+		
+		lpage2 = new LoginPage(driver2);
+		addcart = new AddToCart(driver2);
+	}
+	
+	@Test(priority=1)
+	public void loginmethod() throws InterruptedException
+	{
+
+		lpage2.loginPageUsername("9850350719");
+		Thread.sleep(500);
+	
+		lpage2.loginPagePWD("Welcome@001");
+		Thread.sleep(500);
+	
+		lpage2.loginPageSubmit();
+		Thread.sleep(1000);
+	}
+
+
+	@Test(priority=2)
+	public void SearchAndAddToCart() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		addcart.SearchProd("realme mobile");
+		Thread.sleep(500);
+	
+		addcart.SearchSubmitBtn();
+		Thread.sleep(500);
+	
+		Thread.sleep(5000);
+		addcart.SelectProduct1();
+		
+		Thread.sleep(5000);
+		Set<String> totalbrowsers = driver2.getWindowHandles();
+		System.out.println("total open windows :" + totalbrowsers.size());
+		
+		Iterator<String> tab = totalbrowsers.iterator();
+		while(tab.hasNext())
+		{
+		String mainwind = tab.next();
+		String childwind = tab.next();
+		
+		driver2.switchTo().window(childwind);
+		Thread.sleep(1000);
+		addcart.AddProtToCart();
+	}
+}
+
+}

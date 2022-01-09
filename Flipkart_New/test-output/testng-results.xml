@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="3" total="10" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="48066" started-at="2022-01-09T11:03:52 IST" finished-at="2022-01-09T11:04:40 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="48066" started-at="2022-01-09T11:03:52 IST" finished-at="2022-01-09T11:04:40 IST">
+      <class name="testCases.TC01">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.TC01@52f759d7]" name="openBrowser" is-config="true" duration-ms="14490" started-at="2022-01-09T11:03:52 IST" finished-at="2022-01-09T11:04:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1064" started-at="2022-01-09T11:04:07 IST" finished-at="2022-01-09T11:04:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageRefresh -->
+        <test-method status="PASS" signature="ReadPropertiesFile()[pri:0, instance:testCases.TC01@52f759d7]" name="ReadPropertiesFile" duration-ms="12" started-at="2022-01-09T11:04:08 IST" finished-at="2022-01-09T11:04:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReadPropertiesFile -->
+        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="9412" started-at="2022-01-09T11:04:08 IST" finished-at="2022-01-09T11:04:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageRefresh -->
+        <test-method status="PASS" signature="InvUnameInvPWD()[pri:1, instance:testCases.TC01@52f759d7]" name="InvUnameInvPWD" duration-ms="2532" started-at="2022-01-09T11:04:17 IST" finished-at="2022-01-09T11:04:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvUnameInvPWD -->
+        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1030" started-at="2022-01-09T11:04:20 IST" finished-at="2022-01-09T11:04:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageRefresh -->
+        <test-method status="PASS" signature="BlnkUnameBlnkPWD()[pri:2, instance:testCases.TC01@52f759d7]" name="BlnkUnameBlnkPWD" duration-ms="2350" started-at="2022-01-09T11:04:21 IST" finished-at="2022-01-09T11:04:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BlnkUnameBlnkPWD -->
+        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1048" started-at="2022-01-09T11:04:23 IST" finished-at="2022-01-09T11:04:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageRefresh -->
+        <test-method status="PASS" signature="ValUnameBlnkPWD()[pri:3, instance:testCases.TC01@52f759d7]" name="ValUnameBlnkPWD" duration-ms="2403" started-at="2022-01-09T11:04:24 IST" finished-at="2022-01-09T11:04:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValUnameBlnkPWD -->
+        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1030" started-at="2022-01-09T11:04:26 IST" finished-at="2022-01-09T11:04:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageRefresh -->
+        <test-method status="PASS" signature="BlnkUnameValPWD()[pri:4, instance:testCases.TC01@52f759d7]" name="BlnkUnameValPWD" duration-ms="2471" started-at="2022-01-09T11:04:28 IST" finished-at="2022-01-09T11:04:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BlnkUnameValPWD -->
+        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1056" started-at="2022-01-09T11:04:30 IST" finished-at="2022-01-09T11:04:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageRefresh -->
+        <test-method status="PASS" signature="BlnkUnameBlnkPWD2()[pri:5, instance:testCases.TC01@52f759d7]" name="BlnkUnameBlnkPWD2" duration-ms="2561" started-at="2022-01-09T11:04:31 IST" finished-at="2022-01-09T11:04:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BlnkUnameBlnkPWD2 -->
+        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1049" started-at="2022-01-09T11:04:34 IST" finished-at="2022-01-09T11:04:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageRefresh -->
+        <test-method status="PASS" signature="ValUnameValPWD2()[pri:6, instance:testCases.TC01@52f759d7]" name="ValUnameValPWD2" duration-ms="5463" started-at="2022-01-09T11:04:35 IST" finished-at="2022-01-09T11:04:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValUnameValPWD2 -->
+      </class> <!-- testCases.TC01 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
