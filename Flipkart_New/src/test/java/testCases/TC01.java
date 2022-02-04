@@ -27,7 +27,7 @@ public class TC01
 	Properties pr;
 	PropertiesFile pf;
 	
-	@BeforeClass
+	@BeforeClass(enabled=false)
 	public void openBrowser() throws IOException
 	{
 		driver = lpage.BrowserConfig();
@@ -38,13 +38,10 @@ public class TC01
 		pf = new PropertiesFile();
 		
 	//	pr = new Properties();
-	//	propFile = new FileInputStream(Path.prop);
-		
-	
+	//	propFile = new FileInputStream(Path.prop);	
 	}
-	
-	
-	@BeforeMethod
+		
+	@BeforeMethod(enabled=false)
 	public void pageRefresh() throws InterruptedException
 	{
 		driver.navigate().refresh();
@@ -115,7 +112,7 @@ public class TC01
 	}
 	
 	//FT_300_04 - Verfiy Flipkart login page by passing invalid username and invalid password
-	@Test(priority = 1)
+	@Test(priority = 1, enabled=false)
 	public void InvUnameInvPWD() throws InterruptedException
 	{
 		//Call user name method and pass username as argument
@@ -131,7 +128,7 @@ public class TC01
 		
 		//Call method LogininvalidPWDmsg to get the error message on webpage
 		String actualErrorText = login1.LogininvalidUnamemsg();
-		// System.out.println("Error on page: " +actualErrorText);
+		//System.out.println("Error on page: " +actualErrorText);
 		String expectedErrorText = "Please enter valid Email ID/Mobile number";
 		
 		//compare the webpage error message with given error message
@@ -139,7 +136,7 @@ public class TC01
 	}
 	
 	//FT_300_05 - Verfiy Flipkart login page by passing blank username and blank password
-	@Test(priority = 2)
+	@Test(priority = 2, enabled=false)
 	public void BlnkUnameBlnkPWD() throws InterruptedException
 	{
 		//Call user name method and pass username as argument
@@ -164,7 +161,7 @@ public class TC01
 	}
 	
 	//FT_300_06- Verify Flipkart login page by passing valid username and blank password
-	@Test(priority = 3)
+	@Test(priority = 3, enabled=false)
 	public void ValUnameBlnkPWD() throws InterruptedException
 	{
 		//Call user name method and pass username as argument
@@ -189,7 +186,7 @@ public class TC01
 	
 	
 	//FT_300_07 - Verify Flipkart login page by passing blank username and valid password
-	@Test(priority = 4)
+	@Test(priority = 4, enabled=false)
 	public void BlnkUnameValPWD() throws InterruptedException
 	{
 	
@@ -214,7 +211,7 @@ public class TC01
 	
 	
 	//FT_300_08 - Verfiy Flipkart login page login button is functional or not by passing blank username and blank password
-	@Test(priority = 5)
+	@Test(priority = 5, enabled=false)
 	public void BlnkUnameBlnkPWD2() throws InterruptedException
 	{
 		//Call user name method and pass username as argument
@@ -238,7 +235,7 @@ public class TC01
 	}
 	
 	//FT_300_09 - Verfiy Flipkart login page login button is functional or not by passing valid username and valid password
-	@Test(priority = 6)
+	@Test(priority = 6, enabled=false)
 	public void ValUnameValPWD2() throws InterruptedException
 	{
 		login1.loginPageUsername("9850350719");
@@ -262,7 +259,7 @@ public class TC01
 	@Test
 	public void ReadPropertiesFile() throws IOException
 	{
-		String value1 = pf.ReadPropertyFileContents("URL");
+		String value1 = PropertiesFile.ReadPropertyFileContents("URL");
 	//	pr.load(propFile);
 	//	String value = pr.getProperty("URL");
 		System.out.println("Properties data: " + value1);

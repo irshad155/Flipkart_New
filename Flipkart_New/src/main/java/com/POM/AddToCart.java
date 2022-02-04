@@ -20,7 +20,6 @@ public AddToCart(WebDriver drv1)
 PageFactory.initElements(drv1, this);
 }
 
-
 //Usage
 public void SearchProd(String prodName)
 {
