@@ -1,73 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="10" passed="7">
+<testng-results skipped="1" failed="1" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48066" started-at="2022-01-09T11:03:52 IST" finished-at="2022-01-09T11:04:40 IST">
+  <suite name="Default suite" duration-ms="18831" started-at="2022-02-26T23:17:35 IST" finished-at="2022-02-26T23:17:54 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48066" started-at="2022-01-09T11:03:52 IST" finished-at="2022-01-09T11:04:40 IST">
-      <class name="testCases.TC01">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.TC01@52f759d7]" name="openBrowser" is-config="true" duration-ms="14490" started-at="2022-01-09T11:03:52 IST" finished-at="2022-01-09T11:04:07 IST">
+    <test name="Default test" duration-ms="18831" started-at="2022-02-26T23:17:35 IST" finished-at="2022-02-26T23:17:54 IST">
+      <class name="testCases.AddToCartTC01">
+        <test-method status="PASS" signature="openBrowser2()[pri:0, instance:testCases.AddToCartTC01@18bf3d14]" name="openBrowser2" is-config="true" duration-ms="15392" started-at="2022-02-26T23:17:35 IST" finished-at="2022-02-26T23:17:51 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1064" started-at="2022-01-09T11:04:07 IST" finished-at="2022-01-09T11:04:08 IST">
+        </test-method> <!-- openBrowser2 -->
+        <test-method status="FAIL" signature="loginmethod()[pri:1, instance:testCases.AddToCartTC01@18bf3d14]" name="loginmethod" duration-ms="2939" started-at="2022-02-26T23:17:51 IST" finished-at="2022-02-26T23:17:54 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test case failed, user not logged in expected [https://www.flipkart.com/] but found [https://www.flipkart.com/account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test case failed, user not logged in expected [https://www.flipkart.com/] but found [https://www.flipkart.com/account/login]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at testCases.AddToCartTC01.loginmethod(AddToCartTC01.java:57)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pageRefresh -->
-        <test-method status="PASS" signature="ReadPropertiesFile()[pri:0, instance:testCases.TC01@52f759d7]" name="ReadPropertiesFile" duration-ms="12" started-at="2022-01-09T11:04:08 IST" finished-at="2022-01-09T11:04:08 IST">
+        </test-method> <!-- loginmethod -->
+        <test-method status="SKIP" signature="SearchAndAddToCart()[pri:0, instance:testCases.AddToCartTC01@18bf3d14]" name="SearchAndAddToCart" duration-ms="0" started-at="2022-02-26T23:17:54 IST" depends-on-methods="testCases.AddToCartTC01.loginmethod" finished-at="2022-02-26T23:17:54 IST">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method AddToCartTC01.SearchAndAddToCart()[pri:0, instance:testCases.AddToCartTC01@18bf3d14] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method AddToCartTC01.SearchAndAddToCart()[pri:0, instance:testCases.AddToCartTC01@18bf3d14] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReadPropertiesFile -->
-        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="9412" started-at="2022-01-09T11:04:08 IST" finished-at="2022-01-09T11:04:17 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageRefresh -->
-        <test-method status="PASS" signature="InvUnameInvPWD()[pri:1, instance:testCases.TC01@52f759d7]" name="InvUnameInvPWD" duration-ms="2532" started-at="2022-01-09T11:04:17 IST" finished-at="2022-01-09T11:04:20 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InvUnameInvPWD -->
-        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1030" started-at="2022-01-09T11:04:20 IST" finished-at="2022-01-09T11:04:21 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageRefresh -->
-        <test-method status="PASS" signature="BlnkUnameBlnkPWD()[pri:2, instance:testCases.TC01@52f759d7]" name="BlnkUnameBlnkPWD" duration-ms="2350" started-at="2022-01-09T11:04:21 IST" finished-at="2022-01-09T11:04:23 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BlnkUnameBlnkPWD -->
-        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1048" started-at="2022-01-09T11:04:23 IST" finished-at="2022-01-09T11:04:24 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageRefresh -->
-        <test-method status="PASS" signature="ValUnameBlnkPWD()[pri:3, instance:testCases.TC01@52f759d7]" name="ValUnameBlnkPWD" duration-ms="2403" started-at="2022-01-09T11:04:24 IST" finished-at="2022-01-09T11:04:26 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValUnameBlnkPWD -->
-        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1030" started-at="2022-01-09T11:04:26 IST" finished-at="2022-01-09T11:04:28 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageRefresh -->
-        <test-method status="PASS" signature="BlnkUnameValPWD()[pri:4, instance:testCases.TC01@52f759d7]" name="BlnkUnameValPWD" duration-ms="2471" started-at="2022-01-09T11:04:28 IST" finished-at="2022-01-09T11:04:30 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BlnkUnameValPWD -->
-        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1056" started-at="2022-01-09T11:04:30 IST" finished-at="2022-01-09T11:04:31 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageRefresh -->
-        <test-method status="PASS" signature="BlnkUnameBlnkPWD2()[pri:5, instance:testCases.TC01@52f759d7]" name="BlnkUnameBlnkPWD2" duration-ms="2561" started-at="2022-01-09T11:04:31 IST" finished-at="2022-01-09T11:04:34 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BlnkUnameBlnkPWD2 -->
-        <test-method status="PASS" signature="pageRefresh()[pri:0, instance:testCases.TC01@52f759d7]" name="pageRefresh" is-config="true" duration-ms="1049" started-at="2022-01-09T11:04:34 IST" finished-at="2022-01-09T11:04:35 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageRefresh -->
-        <test-method status="PASS" signature="ValUnameValPWD2()[pri:6, instance:testCases.TC01@52f759d7]" name="ValUnameValPWD2" duration-ms="5463" started-at="2022-01-09T11:04:35 IST" finished-at="2022-01-09T11:04:40 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValUnameValPWD2 -->
-      </class> <!-- testCases.TC01 -->
+        </test-method> <!-- SearchAndAddToCart -->
+      </class> <!-- testCases.AddToCartTC01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

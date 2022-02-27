@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Flipkart]">
+  <test thread-count="5" name="Test1(failed)">
+    <classes>
+      <class name="testCases.TC01">
+        <methods>
+          <include name="InvUnameValPWD"/>
+          <include name="pageRefresh"/>
+          <include name="ValUnameInvPWD"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- testCases.TC01 -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Flipkart] -->

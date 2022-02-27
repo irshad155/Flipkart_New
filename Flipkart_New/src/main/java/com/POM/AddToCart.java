@@ -38,7 +38,8 @@ product1.click();
 
 public void AddProtToCart()
 {
-addCart.click();
+	addCart.click();
+	addCart.isDisplayed();
 }
 
 }

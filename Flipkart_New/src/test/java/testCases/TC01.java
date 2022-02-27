@@ -6,18 +6,25 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.POM.LoginPage;
 import com.Util.PropertiesFile;
+import com.Util.CustomListner;
 import com.config.DriverPathConfig;
 import com.config.Path;
 
+@Listeners(CustomListner.class)
 public class TC01
 {
 	DriverPathConfig lpage = new DriverPathConfig();
@@ -26,8 +33,9 @@ public class TC01
 	FileInputStream propFile;
 	Properties pr;
 	PropertiesFile pf;
+	CustomListner sc;
 	
-	@BeforeClass(enabled=false)
+	@BeforeClass(enabled=true)
 	public void openBrowser() throws IOException
 	{
 		driver = lpage.BrowserConfig();
@@ -37,11 +45,13 @@ public class TC01
 		
 		pf = new PropertiesFile();
 		
+		sc = new CustomListner();
+		
 	//	pr = new Properties();
 	//	propFile = new FileInputStream(Path.prop);	
 	}
 		
-	@BeforeMethod(enabled=false)
+	@BeforeMethod(enabled=true)
 	public void pageRefresh() throws InterruptedException
 	{
 		driver.navigate().refresh();
@@ -61,10 +71,16 @@ public class TC01
 		
 		login1.loginPageSubmit();
 		Thread.sleep(1000);
+		
+		String actURL = Path.loginURL;
+		String expURL = "https://www.flipkart.com/aaaaaa";
+		
+		//Verify the test case pass or fail
+		Assert.assertEquals(actURL, expURL, "Test case failed, user not logged in");
+		
 	}
-	
 	//FT_300_02 - Verify Flipkart login page by passing valid username and invalid password
-	@Test(enabled=false)
+	@Test(enabled=true, priority=1)
 	public void ValUnameInvPWD() throws InterruptedException
 	{
 		//Call user name method and pass username as argument
@@ -80,16 +96,14 @@ public class TC01
 		
 		//Call method LogininvalidPWDmsg to get the error message on webpage
 		String actualErrorText = login1.LogininvalidUnamdPWDmsg();
-		System.out.println(actualErrorText);
+		String expectedErrorText = "Yours username or password is incorrect";
 		
-		String expectedErrorText = "Your username or password is incorrect";
-		
-		//compare the webpage error message with given error message
-		Assert.assertEquals(actualErrorText, expectedErrorText);
+		//Verify the webpage error message with given error message
+		Assert.assertEquals(actualErrorText, expectedErrorText, "Error message does not match with expected error");
 	}
 	
 	//FT_300_03 - Verify Flipkart login page by passing invalid username and valid password
-	@Test(enabled=false)
+	@Test(enabled=true, priority=2)
 	public void InvUnameValPWD() throws InterruptedException
 	{
 		//Call user name method and pass username as argument
@@ -256,7 +270,7 @@ public class TC01
 	}
 	
 	
-	@Test
+	@Test(enabled=false)
 	public void ReadPropertiesFile() throws IOException
 	{
 		String value1 = PropertiesFile.ReadPropertyFileContents("URL");

@@ -6,13 +6,5 @@
       <class name="testCases.TC01"/>
     </classes>
   </test>
-  
-  
-  <test thread-count="5" name="Test2">
-    <classes>
-      <class name="testCases.TC01"/>
-    </classes>
-  </test>
-  
    <!-- Test -->
 </suite> <!-- Flipkart -->

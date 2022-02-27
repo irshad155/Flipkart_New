@@ -6,14 +6,18 @@ import java.util.Set;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.POM.AddToCart;
 import com.POM.LoginPage;
+import com.Util.CustomListner;
 import com.config.DriverPathConfig;
 import com.config.Path;
 
+@Listeners(CustomListner.class)
 public class AddToCartTC01
 {
 	DriverPathConfig mpage = new DriverPathConfig();
@@ -31,12 +35,12 @@ public class AddToCartTC01
 		
 		lpage2 = new LoginPage(driver2);
 		addcart = new AddToCart(driver2);
+	
 	}
 	
 	@Test(priority=1)
 	public void loginmethod() throws InterruptedException
 	{
-
 		lpage2.loginPageUsername("9850350719");
 		Thread.sleep(500);
 	
@@ -45,10 +49,15 @@ public class AddToCartTC01
 	
 		lpage2.loginPageSubmit();
 		Thread.sleep(1000);
+		
+		String actURL = Path.loginURL;
+		String expURL = "https://www.flipkart.com/";
+		
+		//Verify the test case pass or fail
+		Assert.assertEquals(actURL, expURL, "Test case failed, user not logged in");
 	}
 
-
-	@Test(priority=2)
+	@Test(dependsOnMethods="loginmethod")
 	public void SearchAndAddToCart() throws InterruptedException
 	{
 		Thread.sleep(3000);
@@ -74,6 +83,8 @@ public class AddToCartTC01
 		driver2.switchTo().window(childwind);
 		Thread.sleep(1000);
 		addcart.AddProtToCart();
+		
+		
 	}
 }
 
