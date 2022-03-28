@@ -41,12 +41,9 @@ public class AddToCartTC01
 	@Test(priority=1)
 	public void loginmethod() throws InterruptedException
 	{
-		lpage2.loginPageUsername("9850350719");
+		lpage2.loginPageUsernamePWD("9850350719","Welcome@001");
 		Thread.sleep(500);
-	
-		lpage2.loginPagePWD("Welcome@001");
-		Thread.sleep(500);
-	
+		
 		lpage2.loginPageSubmit();
 		Thread.sleep(1000);
 		
@@ -57,7 +54,7 @@ public class AddToCartTC01
 		Assert.assertEquals(actURL, expURL, "Test case failed, user not logged in");
 	}
 
-	@Test(dependsOnMethods="loginmethod")
+	@Test(priority=2)
 	public void SearchAndAddToCart() throws InterruptedException
 	{
 		Thread.sleep(3000);

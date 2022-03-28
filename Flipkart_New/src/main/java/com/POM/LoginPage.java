@@ -29,17 +29,17 @@ PageFactory.initElements(drv1, this);
 }
 
 //Usage
-public void loginPageUsername(String username)
+//public void loginPageUsernamePWD(String username, String password)
+//{
+//	Uname.sendKeys(username);
+//	Uname.sendKeys(password);
+//}
+
+public void loginPageUsernamePWD(String username, String password) 
 {
-Uname.sendKeys(username);
+	Uname.sendKeys(username);
+	pwd.sendKeys(password);
 }
-
-
-public void loginPagePWD(String password)
-{
-pwd.sendKeys(password);
-}
-
 
 public void loginPageSubmit()
 {
@@ -67,5 +67,7 @@ String error3 = invalidUnamePWDmsg.getText();
 //System.out.println("ER: "+ error3);
 return error3;
 }
+
+
 
 }

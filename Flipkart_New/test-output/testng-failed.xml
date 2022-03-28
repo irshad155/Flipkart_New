@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.AddToCartTC01">
+      <class name="testCases.ExcelPrint">
         <methods>
-          <include name="openBrowser2"/>
-          <include name="loginmethod"/>
-          <include name="SearchAndAddToCart"/>
+          <include name="reade"/>
         </methods>
-      </class> <!-- testCases.AddToCartTC01 -->
+      </class> <!-- testCases.ExcelPrint -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="tests">
+  <test thread-count="2" name="Test02(failed)" parallel="tests">
+    <classes>
+      <class name="testCases.AddToCartTC01">
+        <methods>
+          <include name="openBrowser2"/>
+          <include name="loginmethod"/>
+          <include name="SearchAndAddToCart"/>
+        </methods>
+      </class> <!-- testCases.AddToCartTC01 -->
+    </classes>
+  </test> <!-- Test02(failed) -->
+  <test thread-count="2" name="Test01(failed)" parallel="tests">
+    <classes>
+      <class name="testCases.TC01">
+        <methods>
+          <include name="InvUnameValPWD"/>
+          <include name="pageRefresh"/>
+          <include name="ValUnameInvPWD"/>
+          <include name="openBrowser"/>
+          <include name="ValUnameValPWD2"/>
+        </methods>
+      </class> <!-- testCases.TC01 -->
+    </classes>
+  </test> <!-- Test01(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
